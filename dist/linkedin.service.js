@@ -1,5 +1,9 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.tools = exports.services = void 0;
 const linkedin_email_service_1 = require("./linkedin/linkedin.email.service");
 const linkedin_connect_service_1 = require("./linkedin/linkedin.connect.service");
 const linkedin_message_service_1 = require("./linkedin/linkedin.message.service");
@@ -13,7 +17,8 @@ const linkedin_endorse_service_1 = require("./linkedin/linkedin.endorse.service"
 const linkedin_like_service_1 = require("./linkedin/linkedin.like.service");
 const linkedin_visit_service_1 = require("./linkedin/linkedin.visit.service");
 const linkedin_engagement_service_1 = require("./linkedin/linkedin.engagement.service");
-const LinkedinService = {
+const load_cursor_1 = __importDefault(require("./helpers/load-cursor"));
+exports.services = {
     extract_information: new linkedin_email_service_1.LinkedinEmailService(),
     connect: new linkedin_connect_service_1.LinkedinConnectService(),
     message: new linkedin_message_service_1.LinkedinMessageService(),
@@ -28,5 +33,7 @@ const LinkedinService = {
     visit: new linkedin_visit_service_1.LinkedinVisitService(),
     engagement: new linkedin_engagement_service_1.LinkedinEngagementService(),
 };
-exports.default = LinkedinService;
+exports.tools = {
+    loadCursor: load_cursor_1.default
+};
 //# sourceMappingURL=linkedin.service.js.map

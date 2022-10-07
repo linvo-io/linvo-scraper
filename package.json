@@ -1,6 +1,6 @@
 {
   "name": "linvo-scraper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/linkedin.service.js",
   "scripts": {
@@ -22,6 +22,7 @@
     "@types/sentiment": "^5.0.1",
     "@types/string-similarity": "^4.0.0",
     "emoji-strip": "^1.0.1",
+    "ghost-cursor": "^1.1.15",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "puppeteer-core": "^18.2.1",

@@ -11,7 +11,7 @@ import { LinkedinEndorseService } from "./linkedin/linkedin.endorse.service";
 import { LinkedinLikeService } from "./linkedin/linkedin.like.service";
 import { LinkedinVisitService } from "./linkedin/linkedin.visit.service";
 import { LinkedinEngagementService } from "./linkedin/linkedin.engagement.service";
-declare const LinkedinService: {
+export declare const services: {
     extract_information: LinkedinEmailService;
     connect: LinkedinConnectService;
     message: LinkedinMessageService;
@@ -26,4 +26,6 @@ declare const LinkedinService: {
     visit: LinkedinVisitService;
     engagement: LinkedinEngagementService;
 };
-export default LinkedinService;
+export declare const tools: {
+    loadCursor: (page: import("puppeteer-core").Page, headless: boolean) => Promise<void>;
+};

@@ -29,15 +29,18 @@ npm install linvo-scraper puppeteer --save
 ## Usage
 
 ```javascript
-import LinkedinService from 'linvo-scraper';
+import * as LinvoScraper from 'linvo-scraper';
 import * as puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch();
 const page = await browser.newPage();
 const cdp = await page.target().createCDPSession();
 
+// add ghost-cursor for maximum safety
+await LinvoScraper.tools.loadCursor(page, true);
+
 // Login with Linkedin
-const {token} = await LinkedinService.login.process(page, cdp, {
+const {token} = await LinvoScraper.services.login.process(page, cdp, {
     user: 'bang@linvo.io',
     password: 'superStrongPass!!%'
 })
@@ -54,7 +57,7 @@ await page.setCookie({
     domain: ".www.linkedin.com",
 });
 
-await LinkedinService.connect.process(page, cdp, {
+await LinvoScraper.services.connect.process(page, cdp, {
     message: 'Hi Nevo! Let\'s connect!',
     url: 'https://www.linkedin.com/in/nevo-david/'
 })
