@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://hacksquad.dev">
+  <a href="https://linvo.io">
     <img  alt="logo" src="https://linvo.io/wp-content/uploads/2022/10/linvo-top.png">
   </a>
 </p>
