@@ -1,0 +1,32 @@
+{
+  "name": "linkedin-scraper-2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/linkedin.service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@notifire:nevo-david/linkedin-scraper-2022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@types/emoji-strip": "^1.0.0",
+    "@types/lodash": "^4.14.186",
+    "@types/moment": "^2.13.0",
+    "@types/sentiment": "^5.0.1",
+    "@types/string-similarity": "^4.0.0",
+    "emoji-strip": "^1.0.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "puppeteer-core": "^18.2.1",
+    "querystring": "^0.2.1",
+    "sentiment": "^5.0.2",
+    "string-similarity": "^4.0.4"
+  }
+}

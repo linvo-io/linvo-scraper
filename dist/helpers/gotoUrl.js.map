@@ -1,0 +1,1 @@
+{"version":3,"file":"gotoUrl.js","sourceRoot":"","sources":["../../lib/helpers/gotoUrl.ts"],"names":[],"mappings":";;;AAEO,MAAM,OAAO,GAAG,KAAK,EAAE,IAAU,EAAE,GAAW,EAAE,EAAE;IACrD,IAAI;QACA,MAAM,IAAI,CAAC,IAAI,CAAC,GAAG,EAAE;YACjB,OAAO,EAAE,CAAC;SACb,CAAC,CAAC;KACN;IACD,OAAO,GAAG,EAAE,GAAE;AAClB,CAAC,CAAA;AAPY,QAAA,OAAO,WAOnB"}
