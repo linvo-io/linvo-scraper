@@ -1,5 +1,5 @@
 {
-  "name": "linkedin-scraper-2022",
+  "name": "linvo-scraper",
   "version": "1.0.0",
   "description": "",
   "main": "dist/linkedin.service.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@notifire:nevo-david/linkedin-scraper-2022.git"
+    "url": "git@github.com:linvo-io/linvo-scraper.git"
   },
   "author": "",
   "license": "ISC",
