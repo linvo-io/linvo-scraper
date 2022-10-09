@@ -5,12 +5,9 @@ import { timer } from "../helpers/timer";
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
 import { LinkedinServicesInterface } from "./linkedin.services.interface";
 
-interface RequiredData {
-  viewer: Array<{ name: string }>;
-}
 export class LinkedinProfileViewsService
   extends LinkedinAbstractService
-  implements LinkedinServicesInterface<RequiredData>
+  implements LinkedinServicesInterface<{}>
 {
   globalError() {
     return {
