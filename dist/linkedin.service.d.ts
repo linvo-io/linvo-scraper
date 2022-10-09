@@ -11,6 +11,7 @@ import { LinkedinEndorseService } from "./linkedin/linkedin.endorse.service";
 import { LinkedinLikeService } from "./linkedin/linkedin.like.service";
 import { LinkedinVisitService } from "./linkedin/linkedin.visit.service";
 import { LinkedinEngagementService } from "./linkedin/linkedin.engagement.service";
+import './helpers/colors';
 export declare const services: {
     extract_information: LinkedinEmailService;
     connect: LinkedinConnectService;
