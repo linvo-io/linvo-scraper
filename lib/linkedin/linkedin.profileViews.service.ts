@@ -30,7 +30,7 @@ export class LinkedinProfileViewsService
               .querySelector(
                 ".member-analytics-addon-entity-list__entity-content-title"
               )
-              ?.querySelector("span > span").textContent
+              ?.querySelector("span > span")?.textContent
         )
       );
       console.log(ppl);
