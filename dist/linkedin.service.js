@@ -18,6 +18,8 @@ const linkedin_like_service_1 = require("./linkedin/linkedin.like.service");
 const linkedin_visit_service_1 = require("./linkedin/linkedin.visit.service");
 const linkedin_engagement_service_1 = require("./linkedin/linkedin.engagement.service");
 const load_cursor_1 = __importDefault(require("./helpers/load-cursor"));
+require("./helpers/colors");
+const linkedin_profileViews_service_1 = require("./linkedin/linkedin.profileViews.service");
 exports.services = {
     extract_information: new linkedin_email_service_1.LinkedinEmailService(),
     connect: new linkedin_connect_service_1.LinkedinConnectService(),
@@ -32,6 +34,7 @@ exports.services = {
     like: new linkedin_like_service_1.LinkedinLikeService(),
     visit: new linkedin_visit_service_1.LinkedinVisitService(),
     engagement: new linkedin_engagement_service_1.LinkedinEngagementService(),
+    profileViews: new linkedin_profileViews_service_1.LinkedinProfileViewsService(),
 };
 exports.tools = {
     loadCursor: load_cursor_1.default
