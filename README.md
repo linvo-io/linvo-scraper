@@ -70,6 +70,8 @@ Any contribution is welcomed!
 
 ## 🤝 Contributing
 
+[Please check our Contribution guide to get started!](https://github.com/linvo-io/linvo-scraper/blob/main/CONTRIBUTING.md)
+
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/linvo-io/linvo-scraper/issues?q=is%3Aopen).
 * Fork the repository, Clone it on your device. That's it 🎉
 * Finally make a pull request :)
