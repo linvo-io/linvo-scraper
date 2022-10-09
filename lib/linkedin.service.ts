@@ -12,6 +12,7 @@ import {LinkedinLikeService} from "./linkedin/linkedin.like.service";
 import {LinkedinVisitService} from "./linkedin/linkedin.visit.service";
 import {LinkedinEngagementService} from "./linkedin/linkedin.engagement.service";
 import loadCursor from "./helpers/load-cursor";
+import './helpers/colors';
 
 export const services = {
     extract_information: new LinkedinEmailService(),
