@@ -1,14 +1,8 @@
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
-import { Page } from "puppeteer-core";
+import { Page } from "puppeteer";
 import {timer} from "../helpers/timer";
 
 export class LinkedinPageService extends LinkedinAbstractService {
-  globalError() {
-    return {
-      text: "Could not scrape pages",
-    };
-  }
-
   async elements(page: Page, index: number): Promise<any> {
     if (index === 1) {
       await page.waitForSelector(`.artdeco-card ul li:nth-child(${index})`);

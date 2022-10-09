@@ -1,8 +1,7 @@
 import {
-  CombinedData,
   LinkedinServicesInterface,
 } from "./linkedin.services.interface";
-import { CDPSession, Page } from "puppeteer-core";
+import { CDPSession, Page } from "puppeteer";
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
 import { LinkedinMessagesFromChat } from "./linkedin.messages.from.chat";
 import {gotoUrl} from "../helpers/gotoUrl";
@@ -18,17 +17,11 @@ interface RequiredData {
   }>;
 }
 
-export interface Message {
-  from: "Prospect" | "Me";
-  message: string;
-  sentiment: number;
-}
-
 export class LinkedinMessagesService
   extends LinkedinAbstractService
   implements LinkedinServicesInterface<RequiredData>
 {
-  async process(page: Page, cdp: CDPSession, data: CombinedData<RequiredData>) {
+  async process(page: Page, cdp: CDPSession, data: RequiredData) {
     try {
       for (const messages of data.messages) {
         await page.goto('about:blank');

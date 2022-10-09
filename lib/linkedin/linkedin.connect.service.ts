@@ -1,8 +1,7 @@
 import {
-  CombinedData,
   LinkedinServicesInterface,
 } from "./linkedin.services.interface";
-import { CDPSession, Page } from "puppeteer-core";
+import { CDPSession, Page } from "puppeteer";
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
 import {createLinkedinLink} from "../helpers/create.linkedin.url";
 import {gotoUrl} from "../helpers/gotoUrl";
@@ -12,7 +11,7 @@ import {LinkedinErrors} from "../enums/linkedin.errors";
 interface RequiredData {
   message: string;
   url: string;
-  extra: {
+  extra?: {
     myname: string;
     mylastname: string;
     mycompany: string;
@@ -23,7 +22,7 @@ export class LinkedinConnectService
   extends LinkedinAbstractService
   implements LinkedinServicesInterface<RequiredData>
 {
-  async process(page: Page, cdp: CDPSession, data: CombinedData<RequiredData>) {
+  async process(page: Page, cdp: CDPSession, data: RequiredData) {
     const { message, url } = data;
     const theUrl = createLinkedinLink(url, true);
 

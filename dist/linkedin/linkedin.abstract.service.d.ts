@@ -1,4 +1,4 @@
-import { Page } from "puppeteer-core";
+import { Page } from "puppeteer";
 import { MessagesService } from "../helpers/messages.service";
 export declare class LinkedinAbstractService extends MessagesService {
     extractEmail(page: Page): Promise<{
@@ -35,7 +35,7 @@ export declare class LinkedinAbstractService extends MessagesService {
     moveAndClick(page: Page, select: string | {
         container: string;
         selector: string;
-    }, timeout?: number, totalClicks?: number): Promise<void | import("puppeteer-core").ElementHandle<Element>>;
+    }, timeout?: number, totalClicks?: number): Promise<void | import("puppeteer").ElementHandle<Element>>;
     generateMessage(message: string, params: {
         firstName: string;
         lastName: string;

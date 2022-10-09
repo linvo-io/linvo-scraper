@@ -4,11 +4,6 @@ exports.LinkedinSalesPageService = void 0;
 const linkedin_abstract_service_1 = require("./linkedin.abstract.service");
 const timer_1 = require("../helpers/timer");
 class LinkedinSalesPageService extends linkedin_abstract_service_1.LinkedinAbstractService {
-    globalError() {
-        return {
-            text: "Could not scrape pages",
-        };
-    }
     async salesNavChooser(page) {
         try {
             await page.waitForSelector(".action-select-contract", {

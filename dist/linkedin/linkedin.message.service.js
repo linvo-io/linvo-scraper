@@ -30,7 +30,7 @@ class LinkedinMessageService extends linkedin_abstract_service_1.LinkedinAbstrac
                 : "https://www.linkedin.com" + data.url
             : "https://www.linkedin.com/messaging/");
         await this.waitForLoader(page);
-        const { name, IgnoreProspectMessages, message, image, info, contact, account, } = data;
+        const { name, IgnoreProspectMessages, message } = data;
         if (!data.url) {
             await page.waitForSelector('[type="search-icon"] svg');
             await page.evaluate(() => {

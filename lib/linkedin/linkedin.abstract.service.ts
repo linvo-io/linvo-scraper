@@ -1,4 +1,4 @@
-import { Page } from "puppeteer-core";
+import { Page } from "puppeteer";
 import {MessagesService} from "../helpers/messages.service";
 import {randomIntFromInterval, timer} from "../helpers/timer";
 import {LINKEDIN_ERRORS, LinkedinErrors} from "../enums/linkedin.errors";

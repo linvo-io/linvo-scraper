@@ -27,5 +27,5 @@ export declare const services: {
     engagement: LinkedinEngagementService;
 };
 export declare const tools: {
-    loadCursor: (page: import("puppeteer-core").Page, headless: boolean) => Promise<void>;
+    loadCursor: (page: import("puppeteer").Page, headless: boolean) => Promise<void>;
 };

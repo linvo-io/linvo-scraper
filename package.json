@@ -1,10 +1,12 @@
 {
   "name": "linvo-scraper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/linkedin.service.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/.bin/ts-node lib/test.ts",
+    "watch": "./node_modules/typescript/bin/tsc --watch",
+    "build": "./node_modules/typescript/bin/tsc"
   },
   "repository": {
     "type": "git",
@@ -13,6 +15,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "puppeteer": "^18.2.1",
+    "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
   },
   "dependencies": {

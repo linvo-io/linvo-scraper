@@ -1,14 +1,8 @@
-import { Page } from "puppeteer-core";
+import { Page } from "puppeteer";
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
 import {timer} from "../helpers/timer";
 
 export class LinkedinSalesPageService extends LinkedinAbstractService {
-  globalError() {
-    return {
-      text: "Could not scrape pages",
-    };
-  }
-
   async salesNavChooser(page: Page) {
     try {
       await page.waitForSelector(".action-select-contract", {

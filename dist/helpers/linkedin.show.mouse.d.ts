@@ -1,2 +1,2 @@
-import { Page } from "puppeteer-core";
+import { Page } from "puppeteer";
 export declare function installMouseHelper(page: Page): Promise<void>;

@@ -1,9 +1,8 @@
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
 import {
-  CombinedData,
   LinkedinServicesInterface,
 } from "./linkedin.services.interface";
-import { CDPSession, Page } from "puppeteer-core";
+import { CDPSession, Page } from "puppeteer";
 import { LinkedinMessageService } from "./linkedin.message.service";
 import {createLinkedinLink} from "../helpers/create.linkedin.url";
 import {gotoUrl} from "../helpers/gotoUrl";
@@ -33,7 +32,7 @@ export class LinkedinMessageWithView
   extends LinkedinAbstractService
   implements LinkedinServicesInterface<RequiredData>
 {
-  async process(page: Page, cdp: CDPSession, data: CombinedData<RequiredData>) {
+  async process(page: Page, cdp: CDPSession, data: RequiredData) {
     const theUrl = createLinkedinLink(data.url, true);
 
     gotoUrl(page, theUrl);

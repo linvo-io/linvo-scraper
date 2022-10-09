@@ -1,4 +1,4 @@
-import { Page } from 'puppeteer-core';
+import { Page } from 'puppeteer';
 interface MessageOptions {
     label: string;
     value: string;

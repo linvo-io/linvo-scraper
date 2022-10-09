@@ -1,7 +1,7 @@
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
-import { Page } from "puppeteer-core";
+import { Page } from "puppeteer";
 import Sentiment from "sentiment";
-import { chunk, shuffle } from "lodash";
+import { shuffle } from "lodash";
 import { Message } from "./linkedin.message.service";
 import { LinkedinServicesInterface } from "./linkedin.services.interface";
 import {gotoUrl} from "../helpers/gotoUrl";

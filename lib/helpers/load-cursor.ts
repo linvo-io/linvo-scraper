@@ -1,4 +1,4 @@
-import {Page} from "puppeteer-core";
+import {Page} from "puppeteer";
 import {installMouseHelper} from "./show.mouse";
 import {createCursor} from 'ghost-cursor';
 

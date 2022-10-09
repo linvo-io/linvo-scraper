@@ -1,8 +1,7 @@
 import {
-  CombinedData,
   LinkedinServicesInterface,
 } from "./linkedin.services.interface";
-import { CDPSession, Page } from "puppeteer-core";
+import { CDPSession, Page } from "puppeteer";
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
 import {createLinkedinLink} from "../helpers/create.linkedin.url";
 import {gotoUrl} from "../helpers/gotoUrl";
@@ -21,7 +20,7 @@ export class LinkedinEndorseService
     };
   }
 
-  async process(page: Page, cdp: CDPSession, data: CombinedData<RequiredData>) {
+  async process(page: Page, cdp: CDPSession, data: RequiredData) {
     const { url } = data;
     const theUrl = createLinkedinLink(url, true);
 

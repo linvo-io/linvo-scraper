@@ -1,17 +1,17 @@
-import { CombinedData, LinkedinServicesInterface } from "./linkedin.services.interface";
-import { CDPSession, Page } from "puppeteer-core";
+import { LinkedinServicesInterface } from "./linkedin.services.interface";
+import { CDPSession, Page } from "puppeteer";
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
 interface RequiredData {
     message: string;
     url: string;
-    extra: {
+    extra?: {
         myname: string;
         mylastname: string;
         mycompany: string;
     };
 }
 export declare class LinkedinConnectService extends LinkedinAbstractService implements LinkedinServicesInterface<RequiredData> {
-    process(page: Page, cdp: CDPSession, data: CombinedData<RequiredData>): Promise<{
+    process(page: Page, cdp: CDPSession, data: RequiredData): Promise<{
         name: string;
         currentCompanyPicture: string;
         companyName: string;

@@ -1,10 +1,9 @@
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
-import { Page } from "puppeteer-core";
+import { Page } from "puppeteer";
 import {
-  CombinedData,
   LinkedinServicesInterface,
 } from "./linkedin.services.interface";
-import { CDPSession } from "puppeteer-core";
+import { CDPSession } from "puppeteer";
 import { LinkedinSalesPageService } from "./linkedin.sales.page.service";
 import { LinkedinPageService } from "./linkedin.page.service";
 import { parse, stringify } from "querystring";
@@ -30,7 +29,7 @@ export class LinkedinGlobalPageService
   extends LinkedinAbstractService
   implements LinkedinServicesInterface<RequiredData>
 {
-  async process(page: Page, cdp: CDPSession, data: CombinedData<RequiredData>) {
+  async process(page: Page, cdp: CDPSession, data: RequiredData) {
     const load = await this.startProcess(page, cdp, data);
     return { ...load, url: data.url };
   }
@@ -38,7 +37,7 @@ export class LinkedinGlobalPageService
   async startProcess(
     page: Page,
     cdp: CDPSession,
-    data: CombinedData<RequiredData>
+    data: RequiredData
   ): Promise<{
     pages: number;
     remove_overlapping?: boolean;

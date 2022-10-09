@@ -1,8 +1,7 @@
 import {
-  CombinedData,
   LinkedinServicesInterface,
 } from "./linkedin.services.interface";
-import { CDPSession, Page } from "puppeteer-core";
+import { CDPSession, Page } from "puppeteer";
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
 import { findBestMatch } from "string-similarity";
 import Sentiment from "sentiment";
@@ -52,7 +51,7 @@ export class LinkedinMessageService
     }, name);
   }
 
-  async process(page: Page, cdp: CDPSession, data: CombinedData<RequiredData>) {
+  async process(page: Page, cdp: CDPSession, data: RequiredData) {
     gotoUrl(
       page,
       data.url
@@ -67,11 +66,7 @@ export class LinkedinMessageService
     const {
       name,
       IgnoreProspectMessages,
-      message,
-      image,
-      info,
-      contact,
-      account,
+      message
     } = data;
 
     if (!data.url) {

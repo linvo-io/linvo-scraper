@@ -1,8 +1,7 @@
 import {
-  CombinedData,
   LinkedinServicesInterface,
 } from "./linkedin.services.interface";
-import { CDPSession, Page } from "puppeteer-core";
+import { CDPSession, Page } from "puppeteer";
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
 import {timer} from "../helpers/timer";
 import {LINKEDIN_ERRORS, LinkedinErrors} from "../enums/linkedin.errors";
@@ -16,7 +15,7 @@ export class LinkedinLoginService
   extends LinkedinAbstractService
   implements LinkedinServicesInterface<RequiredData>
 {
-  async process(page: Page, cdp: CDPSession, data: CombinedData<RequiredData>) {
+  async process(page: Page, cdp: CDPSession, data: RequiredData) {
     try {
       await page.goto("https://www.linkedin.com/login");
 

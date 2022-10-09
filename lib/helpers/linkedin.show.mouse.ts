@@ -1,4 +1,4 @@
-import { Page } from "puppeteer-core";
+import { Page } from "puppeteer";
 
 export async function installMouseHelper(page: Page) {
   await page.evaluateOnNewDocument(() => {

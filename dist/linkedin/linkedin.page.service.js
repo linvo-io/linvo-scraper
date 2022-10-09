@@ -4,11 +4,6 @@ exports.LinkedinPageService = void 0;
 const linkedin_abstract_service_1 = require("./linkedin.abstract.service");
 const timer_1 = require("../helpers/timer");
 class LinkedinPageService extends linkedin_abstract_service_1.LinkedinAbstractService {
-    globalError() {
-        return {
-            text: "Could not scrape pages",
-        };
-    }
     async elements(page, index) {
         if (index === 1) {
             await page.waitForSelector(`.artdeco-card ul li:nth-child(${index})`);

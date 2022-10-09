@@ -1,4 +1,4 @@
-import {Page} from "puppeteer-core";
+import {Page} from "puppeteer";
 
 export const gotoUrl = async (page: Page, url: string) => {
     try {

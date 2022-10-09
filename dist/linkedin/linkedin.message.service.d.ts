@@ -1,5 +1,5 @@
-import { CombinedData, LinkedinServicesInterface } from "./linkedin.services.interface";
-import { CDPSession, Page } from "puppeteer-core";
+import { LinkedinServicesInterface } from "./linkedin.services.interface";
+import { CDPSession, Page } from "puppeteer";
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
 interface RequiredData {
     name: string;
@@ -23,7 +23,7 @@ export interface Message {
 }
 export declare class LinkedinMessageService extends LinkedinAbstractService implements LinkedinServicesInterface<RequiredData> {
     findInChat(page: Page, name: string): Promise<string>;
-    process(page: Page, cdp: CDPSession, data: CombinedData<RequiredData>): Promise<{
+    process(page: Page, cdp: CDPSession, data: RequiredData): Promise<{
         info: any;
         messages: {
             name: string;
