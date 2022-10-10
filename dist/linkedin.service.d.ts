@@ -12,6 +12,7 @@ import { LinkedinLikeService } from "./linkedin/linkedin.like.service";
 import { LinkedinVisitService } from "./linkedin/linkedin.visit.service";
 import { LinkedinEngagementService } from "./linkedin/linkedin.engagement.service";
 import './helpers/colors';
+import { LinkedinProfileViewsService } from "./linkedin/linkedin.profileViews.service";
 export declare const services: {
     extract_information: LinkedinEmailService;
     connect: LinkedinConnectService;
@@ -26,6 +27,7 @@ export declare const services: {
     like: LinkedinLikeService;
     visit: LinkedinVisitService;
     engagement: LinkedinEngagementService;
+    profileViews: LinkedinProfileViewsService;
 };
 export declare const tools: {
     loadCursor: (page: import("puppeteer").Page, headless: boolean) => Promise<void>;

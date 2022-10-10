@@ -13,6 +13,7 @@ import {LinkedinVisitService} from "./linkedin/linkedin.visit.service";
 import {LinkedinEngagementService} from "./linkedin/linkedin.engagement.service";
 import loadCursor from "./helpers/load-cursor";
 import './helpers/colors';
+import { LinkedinProfileViewsService } from "./linkedin/linkedin.profileViews.service";
 
 export const services = {
     extract_information: new LinkedinEmailService(),
@@ -28,6 +29,7 @@ export const services = {
     like: new LinkedinLikeService(),
     visit: new LinkedinVisitService(),
     engagement: new LinkedinEngagementService(),
+    profileViews: new LinkedinProfileViewsService(),
 }
 
 export const tools = {
