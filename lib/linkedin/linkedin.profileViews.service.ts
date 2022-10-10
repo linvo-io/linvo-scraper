@@ -1,8 +1,6 @@
 import { CDPSession, Page } from "puppeteer";
-
 import { autoScroll } from "../helpers/autoScroll";
 import { timer } from "../helpers/timer";
-
 import { LinkedinAbstractService } from "./linkedin.abstract.service";
 import { LinkedinServicesInterface } from "./linkedin.services.interface";
 
