@@ -51,6 +51,7 @@ export class LinkedinGlobalPageService
         pages: 0,
       };
     }
+
     const onlyQuery = new URL(url.replace("#", "?"));
     const parseQuery = parse(onlyQuery.search);
 
@@ -94,13 +95,9 @@ export class LinkedinGlobalPageService
       parseQuery?.viewAllFilters = "false";
     }
 
-    const newUrl = stringify(
-      parseQuery,
-      onlyQuery.origin +
+    const newUrl = onlyQuery.origin +
         onlyQuery.pathname +
-        (url.indexOf("#") > -1 ? "#" : "?")
-    );
-
+        (url.indexOf("#") > -1 ? "#" : "?") + stringify(parseQuery).replace('%3F', '');
     const info = await (url.indexOf("/sales/") > -1
       ? salesPage
       : normalPage
