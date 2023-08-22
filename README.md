@@ -92,3 +92,6 @@ This project is [MIT License](https://opensource.org/licenses/MIT) licensed.
 
 ***
 We accept contribution with great love! Show your interest! Contribute!
+
+
+[How to get GitHub stars](https://howtogetgithubstars.com)
