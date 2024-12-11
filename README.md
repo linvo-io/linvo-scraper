@@ -93,5 +93,6 @@ This project is [MIT License](https://opensource.org/licenses/MIT) licensed.
 ***
 We accept contribution with great love! Show your interest! Contribute!
 
+From the creator or [Postiz](https://postiz.com)
 
 [How to get GitHub stars](https://howtogetgithubstars.com)
