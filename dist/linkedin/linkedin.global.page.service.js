@@ -46,9 +46,9 @@ class LinkedinGlobalPageService extends linkedin_abstract_service_1.LinkedinAbst
         if (parseQuery === null || parseQuery === void 0 ? void 0 : parseQuery.viewAllFilters) {
             parseQuery === null || parseQuery === void 0 ? void 0 : parseQuery.viewAllFilters = "false";
         }
-        const newUrl = (0, querystring_1.stringify)(parseQuery, onlyQuery.origin +
+        const newUrl = onlyQuery.origin +
             onlyQuery.pathname +
-            (url.indexOf("#") > -1 ? "#" : "?"));
+            (url.indexOf("#") > -1 ? "#" : "?") + (0, querystring_1.stringify)(parseQuery).replace('%3F', '');
         const info = await (url.indexOf("/sales/") > -1
             ? salesPage
             : normalPage).pagesTask(page, newUrl);
